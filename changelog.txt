@@ -1,0 +1,7 @@
+VAPI changelog
+
+Version:
+---------
+
+    1.0.0 : Initial commit. Tested and working for several projects at this
+        point.

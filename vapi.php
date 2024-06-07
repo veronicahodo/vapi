@@ -98,14 +98,14 @@ abstract class Vapi
         if ($_command === '') {
             return [
                 'status' => 'error',
-                'message' => "[$this->unit] invalid command: $_command"
+                'message' => "$this->unit: invalid command: $_command"
             ];
         }
 
         if (!$this->setFields($_command)) {
             return [
                 'status' => 'error',
-                'message' => "[$this->unit] missing required fields: " . $this->requiredFields($_command)
+                'message' => "$this->unit: missing required fields: " . $this->requiredFields($_command)
             ];
         }
 
@@ -114,7 +114,7 @@ abstract class Vapi
             if (empty($this->userId)) {
                 return [
                     'status' => 'error',
-                    'message' => '[api] invalid token'
+                    'message' => 'system: invalid token'
                 ];
             }
         }
@@ -122,7 +122,7 @@ abstract class Vapi
         if (!array_key_exists($_command, $this->commands)) {
             return [
                 'status' => 'error',
-                'message' => "[$this->unit] invalid command: $_command"
+                'message' => "$this->unit: invalid command: $_command"
             ];
         }
 
